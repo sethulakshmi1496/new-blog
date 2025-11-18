@@ -1,23 +1,31 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ----------------------------
+# GLOBAL IGNORE FOR DJANGO + REACT
+# ----------------------------
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# === PYTHON ===
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.log
 
-# testing
-/coverage
+# === DATABASE ===
+blog_backend/db.sqlite3
 
-# production
-/build
+# === DJANGO MEDIA ===
+blog_backend/media/
 
-# misc
+# === ENV FILES ===
+*.env
+*.env.*
+
+# === NODE ===
+blog_frontend/node_modules/
+blog_frontend/build/
+
+# === MACOS ===
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# === EDITOR ===
+.vscode/
+.idea/

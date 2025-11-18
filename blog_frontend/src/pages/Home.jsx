@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+<div className="bg-red-500 text-white p-4">TEST</div>
 
 function formatDate(date) {
   if (!date) return "";

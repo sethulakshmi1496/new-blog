@@ -1,26 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  return (
-    <header className="bg-white border-b">
-      <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-extrabold">MyBlog</Link>
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
-        <div className="flex items-center gap-4">
-          <Link
-            to="/create"
-            className="px-4 py-2 bg-black text-white rounded-full"
-          >
-            Write
+  const doSearch = (e) => {
+    e.preventDefault();
+    if (query.trim()) navigate(`/search?q=${query}`);
+  };
+
+  return (
+    <header className="bg-white shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+
+        <Link to="/" className="text-xl font-bold">MyBlog</Link>
+
+        <form onSubmit={doSearch} className="flex items-center gap-2">
+          <input
+            type="text"
+            placeholder="Search…"
+            className="border rounded px-3 py-1"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button className="px-3 py-1 bg-black text-white rounded">
+            Search
+          </button>
+        </form>
+
+        <nav className="space-x-3">
+          <Link to="/create" className="px-3 py-1 bg-blue-600 text-white rounded">
+            Create
           </Link>
-          <a
-            href="/admin/"
-            className="px-4 py-2 border rounded-full hover:bg-gray-100"
-          >
-            Admin
-          </a>
-        </div>
+        </nav>
+
       </div>
     </header>
   );

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import PostDetail from "./pages/PostDetail";
+import SearchPage from "./pages/SearchPage";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="*" element={<h1 className="p-8 text-center text-2xl">
           404 — Page Not Found
         </h1>} />
+        <Route path="/search" element={<SearchPage />} />
 
       </Routes>
     </BrowserRouter>

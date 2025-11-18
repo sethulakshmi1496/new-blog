@@ -1,20 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Medium-like global typography */
-body {
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-  background: #fff;
-  color: #111;
-}
-
-/* Fix alignment overrides */
-.ProseMirror {
-  text-align: left !important;
-}
-
-.editor-wrapper {
-  text-align: left !important;
-}
