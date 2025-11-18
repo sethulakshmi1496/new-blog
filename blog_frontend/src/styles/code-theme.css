@@ -1,0 +1,37 @@
+/* src/styles/code-theme.css */
+
+/* Base code block look */
+.tiptap-code {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 13px;
+}
+
+/* Light theme (default) */
+@media (prefers-color-scheme: light) {
+  .tiptap-code {
+    background: #f6f8fa;
+    color: #24292e;
+  }
+  .hljs-keyword { color: #6f42c1; }    /* purple */
+  .hljs-string { color: #032f62; }     /* dark blue */
+  .hljs-comment { color: #6a737d; }    /* gray */
+  .hljs-number { color: #005cc5; }
+  .hljs-function, .hljs-title { color: #e36209; }
+}
+
+/* Dark theme (VSCode Dark+) */
+@media (prefers-color-scheme: dark) {
+  .tiptap-code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+  }
+  .hljs-keyword { color: #569cd6; }
+  .hljs-string { color: #ce9178; }
+  .hljs-comment { color: #6a9955; }
+  .hljs-number { color: #b5cea8; }
+  .hljs-function, .hljs-title { color: #dcdcaa; }
+}
