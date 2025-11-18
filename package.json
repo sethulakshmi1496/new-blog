@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@tiptap/extension-code-block-lowlight": "^3.10.7",
+    "@tiptap/extension-image": "^3.10.7",
+    "@tiptap/extension-link": "^3.10.7",
+    "@tiptap/extension-youtube": "^3.10.7",
+    "@tiptap/react": "^3.10.7",
+    "@tiptap/starter-kit": "^3.10.7",
+    "lowlight": "^3.3.0"
+  }
+}
